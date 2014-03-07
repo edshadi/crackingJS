@@ -9,6 +9,9 @@ describe('Node', function () {
     it('is initialized to the passed in value', function () {
       expect(node.data).to.eq(data);
     });
+    it('raises if data is undefined', function () {
+      expect(function() { new Node }).to.throw(Error);
+    });
     it('we are able to set it', function () {
       var anoterData = "another data";
       node.data = anoterData;
@@ -18,6 +21,11 @@ describe('Node', function () {
   describe('#next', function () {
     it('is initialized to nil', function () {
       expect(node.next).be.an('undefined');
+    });
+  });
+  describe('#prev', function () {
+    it('is initialized to nil', function () {
+      expect(node.prev).be.an('undefined');
     });
   });
 });
