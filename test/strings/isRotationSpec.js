@@ -15,5 +15,8 @@ describe(Strings, function () {
     it('returns true if str2 is rotation of str1', function () {
       expect(Strings.isRotation(str1, str2)).to.be.true
     });
+    it('returns false if str2 is not a rotation of str1', function () {
+      expect(Strings.isRotation("a", "b")).to.be.false
+    });
   });
 });
